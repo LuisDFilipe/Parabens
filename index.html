@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('images/image1.jpg')
         }
 
         header h1 {
@@ -49,14 +50,14 @@
 <body>
     <!-- Start Screen -->
     <div id="startScreen">
-        <h1>🎉 Clica para Começar a festa! 🎶</h1>
+        <h1>🎉 Clica para começar a festa! 🎶</h1>
         <button id="startButton">Start</button>
     </div>
 
     <!-- Main Content (Hidden until button is clicked) -->
     <div id="mainContent">
         <header>
-            <h1>Parabéns!</h1>
+            <h1>Parabéns, <b>Tu</b>!</h1>
         </header>
         <main>
             <!--
@@ -106,6 +107,20 @@
             startScreen.style.display = "none";
             mainContent.style.display = "block";
         });
+
+        /* Random image
+        const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'];
+
+        // Pick a random image
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+
+        // Set it as the body's background image
+        document.body.style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('${randomImage}')`;
+        document.body.style.backgroundImage = `url('${randomImage}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundPosition = 'center';
+        */
     </script>
 </body>
 </html>
