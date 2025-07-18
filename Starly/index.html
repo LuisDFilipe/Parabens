@@ -4,7 +4,7 @@
     <title>Parabens!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="icon" href="assets/icon.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('images/image1.jpg');
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('assets/image1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -77,8 +77,8 @@
             <section id="carousel">
                 <h2>Our Memories</h2>
                 <div id="slides">
-                    <img src="images/image1.jpg" alt="Memory 1">
-                    <img src="images/image2.jpg" alt="Memory 2">
+                    <img src="assets/image1.jpg" alt="Memory 1">
+                    <img src="assets/image2.jpg" alt="Memory 2">
                 </div>
                 <div id="controls">
                     <button id="prev">Previous</button>
@@ -88,12 +88,12 @@
             -->
             <section id="music">
                 <audio id="bgMusic" controls loop>
-                    <source src="birthday_song.mp3" type="audio/mpeg">
+                    <source src="assets/birthday_song.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </section>
             <section id="gif">
-                <img src="images/cat1.gif" width="300" height="auto" alt="Birthday Cat">
+                <img src="assets/cat1.gif" width="300" height="auto" alt="Birthday Cat">
             </section>
         </main>
     </div>
@@ -116,7 +116,7 @@
         });
 
         /* Random image
-        const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'];
+        const images = ['assets/image1.jpg', 'assets/image2.jpg', 'assets/image3.jpg'];
 
         // Pick a random image
         const randomImage = images[Math.floor(Math.random() * images.length)];
