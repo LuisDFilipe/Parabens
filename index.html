@@ -49,6 +49,22 @@
         #mainContent {
             display: none; /* Hidden initially */
         }
+        .raindrop {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('raindrop.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall linear;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -125,6 +141,35 @@
         document.body.style.backgroundRepeat = 'no-repeat';
         document.body.style.backgroundPosition = 'center';
         */
+        
+        const rainContainer = document.getElementById('mainContent');
+
+        function createRaindrop() {
+            const drop = document.createElement('div');
+            drop.classList.add('raindrop');
+
+            // Random horizontal start position
+            drop.style.left = `${Math.random() * 100}vw`;
+
+            // Random animation duration and delay
+            const duration = Math.random() * 2 + 2; // 2–4 seconds
+            drop.style.animationDuration = `${duration}s`;
+
+            // Random size (optional)
+            const size = Math.random() * 10 + 10;
+            drop.style.width = `${size}px`;
+            drop.style.height = `${size}px`;
+
+            rainContainer.appendChild(drop);
+
+            // Remove after it falls
+            setTimeout(() => {
+                rainContainer.removeChild(drop);
+            }, duration * 1000);
+        }
+
+        // Generate rain
+        setInterval(createRaindrop, 100);
     </script>
 </body>
 </html>
