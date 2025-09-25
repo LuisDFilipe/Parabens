@@ -6,7 +6,7 @@
     <meta name="description" content="Parabens Pedro!">
     <meta name="robots" content="noindex, nofollow, noimageindex, noarchive">
     <meta name="googlebot" content="noindex, nofollow, noimageindex, noarchive">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="icon" href="../assets/icon.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('assets/image1.jpg');
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('../assets/image1.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -72,36 +72,14 @@
             <h1>Parabéns, <b>Pedro</b>!</h1>
         </header>
         <main>
-            <!--
-            <section id="game">
-                <h2>Rock, Paper, Scissors!</h2>
-                <div id="choices">
-                    <button id="rock">Rock</button>
-                    <button id="paper">Paper</button>
-                    <button id="scissors">Scissors</button>
-                </div>
-                <p id="result"></p>
-            </section>
-            <section id="carousel">
-                <h2>Our Memories</h2>
-                <div id="slides">
-                    <img src="images/image1.jpg" alt="Memory 1">
-                    <img src="images/image2.jpg" alt="Memory 2">
-                </div>
-                <div id="controls">
-                    <button id="prev">Previous</button>
-                    <button id="next">Next</button>
-                </div>
-            </section>
-            -->
             <section id="music">
                 <audio id="bgMusic" controls loop>
-                    <source src="birthday_song.mp3" type="audio/mpeg">
+                    <source src="../assets/birthday_song.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </section>
             <section id="gif">
-                <img src="assets/cat1.gif" width="300" height="auto" alt="Birthday Cat">
+                <img src="../assets/cat1.gif" width="300" height="auto" alt="Birthday Cat">
             </section>
         </main>
     </div>
@@ -122,20 +100,6 @@
             startScreen.style.display = "none";
             mainContent.style.display = "block";
         });
-
-        /* Random image
-        const images = ['assets/image1.jpg', 'assets/image2.jpg', 'assets/image3.jpg'];
-
-        // Pick a random image
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-
-        // Set it as the body's background image
-        document.body.style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('${randomImage}')`;
-        document.body.style.backgroundImage = `url('${randomImage}')`;
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundRepeat = 'no-repeat';
-        document.body.style.backgroundPosition = 'center';
-        */
     </script>
 </body>
 </html>
