@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabens!</title>
+    <meta name="description" content="Parabens Rita!">
+    <meta name="robots" content="noindex, nofollow, noimageindex, noarchive">
+    <meta name="googlebot" content="noindex, nofollow, noimageindex, noarchive">
+    <link rel="icon" href="../assets/icon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffbe6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('assets/image1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header h1 {
+            margin-top: 30px;
+            font-size: 2.5em;
+            color: #d35400;
+        }
+
+        #startScreen {
+            text-align: center;
+        }
+
+        #startButton {
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #startButton:hover {
+            background-color: #e67e22;
+        }
+
+        #mainContent {
+            display: none; /* Hidden initially */
+        }
+        
+        #music {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen">
+        <h1>🎉 Clica para começar a festa! 🎶</h1>
+        <button id="startButton">Start</button>
+    </div>
+
+    <!-- Main Content (Hidden until button is clicked) -->
+    <div id="mainContent">
+        <header>
+            <h1>Parabéns, <b>Rita</b>!</h1>
+        </header>
+        <main>
+            <section id="music">
+                <audio id="bgMusic" controls loop>
+                    <source src="../assets/birthday_song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+            <section id="gif">
+                <img src="../assets/cat1.gif" width="300" height="auto" alt="Birthday Cat">
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const startButton = document.getElementById("startButton");
+        const startScreen = document.getElementById("startScreen");
+        const mainContent = document.getElementById("mainContent");
+        const bgMusic = document.getElementById("bgMusic");
+
+        startButton.addEventListener("click", () => {
+            // Start music
+            bgMusic.play().catch((err) => {
+                console.log("Autoplay blocked:", err);
+            });
+
+            // Show main content, hide start screen
+            startScreen.style.display = "none";
+            mainContent.style.display = "block";
+        });
+    </script>
+</body>
+</html>
